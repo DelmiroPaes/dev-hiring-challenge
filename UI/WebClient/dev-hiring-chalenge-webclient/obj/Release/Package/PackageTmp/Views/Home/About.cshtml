@@ -1,0 +1,59 @@
+﻿@{
+    ViewBag.Title = "Informações";
+}
+<h2>Informações</h2>
+<h5>Arquitetura</h5>
+
+<div align="center">
+    <img align="center" src="~/Content/Images/Architecture_03.png" text-align="center" />
+</div>
+
+<h5>
+    <p>Transação</p>
+</h5>
+<p>1&deg; Cliente efetua a requisição</p>
+<p>2&deg; ASP.NET Website roteia a requisição para o serviço interno GitHubBridgeWebApi</p>
+<p>&emsp; O serviço GitHubBridgeWebApi efetua as seguintes etapas:
+<p>&emsp;&emsp;&emsp; 1&deg; Executa requisição à WebAPI do GitHub</p>
+<p>&emsp;&emsp;&emsp; 2&deg; Armazena os resultados recebidos do serviço do GitHuB no banco de dados SQL Server</p>
+<p>&emsp;&emsp;&emsp;&emsp;&emsp; Dados são apagados a cada nova requisição<p>
+<p>&emsp;&emsp;&emsp;&emsp;&emsp; TODO: Caso não haja nova requisição em um período de 5 minutos o banco de dados é excluído<p>
+<p>&emsp;&emsp;&emsp; 3&deg; Recupera dados do SQL Server
+<p>&emsp;&emsp;&emsp; 4&deg; Gera um arquivo Json e retorna para o ASP.NET Website
+<p>3&deg; ASP.NET Website formata Json recebido e retorna a página HTML para o WEBCLIENT</p>
+<br />
+<h5>
+    <p>Informações gerais</p>
+</h5>
+<h6>
+    <p>Codificação:</p>
+</h6>
+<p>&emsp;&emsp;&emsp; IDE de desenvolvimento: Microsoft Visual Studio 2017</p>
+<p>&emsp;&emsp;&emsp; Linguagem de programação: C#</p>
+<h6>
+    <p>Testes:</p>
+</h6>
+<p>&emsp;&emsp;&emsp; Técnica de Testes: TDD</p>
+<p>&emsp;&emsp;&emsp; Framework de Testes unitários automatizados: MSTest v2</p>
+<p>&emsp;&emsp;&emsp; Framework de Testes integrados automatizados: MSTest v2 (Testado apenas o caminho feliz - Servidores responsivos)</p>
+<p>&emsp;&emsp;&emsp; Cobertura do código: 96% Cliente / 92% Servidor</p>
+<p>&emsp;&emsp;&emsp;&emsp;&emsp; Testa falha de rede, do serviço GitHub e do SQL Server</p>
+<h6>
+    <p>Utilização de Recursos:</p>
+</h6>
+<p>&emsp;&emsp;&emsp; Pesquisa: 4 horas</p>
+<p>&emsp;&emsp;&emsp; Definição da Arquitetura: 4 horas, entre erros e acertos</p>
+<p>&emsp;&emsp;&emsp; Desenvolvimento: 30 horas</p>
+@*<p>&emsp;&emsp;&emsp; Custo estimado: <small>38h x R$137,72 = R$5.233,36 (Inclusos equipamentos, infra, café, Coca-Cola e papel higiênico)</small></p>
+<p>&emsp;&emsp;&emsp; Metodologias: <small>Go HORSE, GSSTO (God saves Stack Overflow) e GS (Google Search)</small></p>*@
+<h6>
+    Observações:
+</h6>
+<p><small>&emsp;&emsp;&emsp;O projeto atende aos requisitos porém não foi testado suficientemente para ser considerado minimamente aceitável em um ambiente de produção.</small></p>
+<p><small>&emsp;&emsp;&emsp;Tive dificuldades com a definição da arquitetura e estruturação de pastas de projetos.</small></p>
+<p><small>&emsp;&emsp;&emsp;Pessoalmente acho a aplicação muito obfuscada.</small></p>
+<p><br></p>
+<p><small>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Agradeço a oportunidade, cordialmente,</small></p>
+<p><small>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Delmiro Paes</small></p>
+<p><small>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;delmiro.paes@gmail.com</small></p>
+<p><small>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;(11) 96973-0000</small></p>

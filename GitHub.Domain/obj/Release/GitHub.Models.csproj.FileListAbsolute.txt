@@ -1,0 +1,6 @@
+Z:\Prj\Delmiro\Ateliware\dev-hiring-challenge\dev-hiring-challenge\GitHub.Domain\bin\Release\GitHub.Domain.dll
+Z:\Prj\Delmiro\Ateliware\dev-hiring-challenge\dev-hiring-challenge\GitHub.Domain\bin\Release\GitHub.Domain.pdb
+Z:\Prj\Delmiro\Ateliware\dev-hiring-challenge\dev-hiring-challenge\GitHub.Domain\obj\Release\GitHub.Models.csprojAssemblyReference.cache
+Z:\Prj\Delmiro\Ateliware\dev-hiring-challenge\dev-hiring-challenge\GitHub.Domain\obj\Release\GitHub.Models.csproj.CoreCompileInputs.cache
+Z:\Prj\Delmiro\Ateliware\dev-hiring-challenge\dev-hiring-challenge\GitHub.Domain\obj\Release\GitHub.Domain.dll
+Z:\Prj\Delmiro\Ateliware\dev-hiring-challenge\dev-hiring-challenge\GitHub.Domain\obj\Release\GitHub.Domain.pdb

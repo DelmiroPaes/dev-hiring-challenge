@@ -1,0 +1,163 @@
+﻿@using System.Reflection
+@using dev_hiring_chalenge_webclient.Controllers
+@using GitHub.Models
+
+@{
+    int itemsIndex = 0;
+    string classValue = string.Empty;
+    string classValue01 = string.Empty;
+    Owner owner = null;
+    License lisence = null;
+}
+
+@{
+    ViewBag.Title = "Resultado da consulta ao GitHub";
+}
+<h2>@ViewBag.Title.</h2>
+
+@*<-- POCO, POCO, POCO... /-->*@
+<div rows>
+    <div>
+        <ul class="nav nav-pills">
+            @{
+                for(itemsIndex = 0; itemsIndex < ViewBag.ADHCServiceJsonResult.LanguageItems.Count; ++itemsIndex)
+                {
+                    if(itemsIndex == 0)
+                    {
+                        classValue01 = "active";
+                    }
+                    else
+                    {
+                        classValue01 = "";
+                    }
+
+                    <li class="@classValue01">
+                        <a data-toggle="pill" href="#Laguage_@itemsIndex">
+                            @ViewBag.ADHCServiceJsonResult.LanguageItems[itemsIndex].Name
+                        </a>
+                    </li>
+                }
+            }
+        </ul>
+    </div>
+
+    <div class="tab-content">
+        @{
+            for(itemsIndex = 0; itemsIndex < ViewBag.ADHCServiceJsonResult.LanguageItems.Count; ++itemsIndex)
+            {
+                if(itemsIndex == 0)
+                {
+                    classValue = "tab-pane fade in active";
+                }
+                else
+                {
+                    classValue = "tab-pane fade";
+                }
+
+                <div id="Laguage_@itemsIndex" class="@classValue">
+
+
+                    <h3>
+
+                        @{
+                            // POCO.
+                            string languageName = ViewBag.ADHCServiceJsonResult.LanguageItems[itemsIndex].Name.ToString();
+                            string imageName = "";
+
+                            if("C++" == languageName)
+                            {
+                                imageName = "CPP-logo-01.png";
+                            }
+                            else if("Python" == languageName)
+                            {
+                                imageName = "Python-Logo-04.png";
+                            }
+                            else if("Java" == languageName)
+                            {
+                                imageName = "Java-Logo-01.png";
+                            }
+                            else if("C" == languageName)
+                            {
+                                imageName = "C-Logo-01.png";
+                            }
+                            else if("C#" == languageName)
+                            {
+                                imageName = "CSharp-Logo-01.png";
+                            }
+
+                            <img align="right" src="~/Content/Images/@imageName" height="64" width="64">
+                        }
+
+                        @ViewBag.ADHCServiceJsonResult.LanguageItems[itemsIndex].Name
+                        (@ViewBag.ADHCServiceJsonResult.LanguageItems[itemsIndex].TotalStars  <small>&#11088</small>).
+                    </h3>
+
+                    @foreach(var tempItem in ViewBag.ADHCServiceJsonResult.LanguageItems[itemsIndex].Items)
+                    {
+                        if(tempItem.Language != ViewBag.ADHCServiceJsonResult.LanguageItems[itemsIndex].Name)
+                        {
+                            continue;
+                        }
+
+                        <h3>
+                            Projeto:
+                            @tempItem.Name (@tempItem.Stargazers_count   <small>&#11088</small>)
+                            <img src="@tempItem.Owner.Avatar_url" height="36" width="36">
+                        </h3>
+                        <h5>
+                            &emsp;@tempItem.Description
+                        </h5>
+                        <div class="container  pre-scrollable table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Campo</th>
+                                        <th>Valor</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @{
+                                        var itemProps = tempItem.GetType().GetProperties();
+                                    }
+                                    @foreach(var ItemProp in itemProps)
+                                    {
+                                        if(ItemProp.Name == "Owner" || ItemProp.Name == "License")
+                                        {
+                                            <tr>
+                                                <td>@ItemProp.Name</td>
+                                                <td></td>
+                                            </tr>
+
+                                            if(null == ItemProp.GetValue(tempItem, null))
+                                            {
+                                                continue;
+                                            }
+
+                                            var subItemProps = ItemProp.GetValue(tempItem, null).GetType().GetProperties();
+
+                                            foreach(var subItemProp in subItemProps)
+                                            {
+                                                <tr>
+                                                    <td>&emsp;&emsp;&emsp; @subItemProp.Name.ToString()</td>
+                                                    <td>&emsp;&emsp;&emsp; @subItemProp.GetValue(ItemProp.GetValue(tempItem, null), null)</td>
+                                                </tr>
+                                            }
+                                            continue;
+                                        }
+                                        else
+                                        {
+                                            <tr>
+                                                <td>@ItemProp.Name.ToString()</td>
+                                                <td>@ItemProp.GetValue(tempItem, null)</td>
+                                            </tr>
+                                        }
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    }
+                </div>
+            }
+        }
+    </div>
+</div>

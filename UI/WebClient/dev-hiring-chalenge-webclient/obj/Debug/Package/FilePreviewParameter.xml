@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="dev-hiring-chalenge-webclient20190809024832" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^Z:\\Prj\\Delmiro\\Ateliware\\dev-hiring-challenge\\dev-hiring-chalenge-webclient\\dev-hiring-chalenge-webclient\\obj\\Debug\\Package\\PackageTmp$" />
+    <parameterEntry kind="ProviderPath" scope="setAcl" match="^Z:\\Prj\\Delmiro\\Ateliware\\dev-hiring-challenge\\dev-hiring-chalenge-webclient\\dev-hiring-chalenge-webclient\\obj\\Debug\\Package\\PackageTmp$" />
+  </parameter>
+</parameters>

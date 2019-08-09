@@ -1,0 +1,6 @@
+Z:\Prj\Delmiro\Ateliware\dev-hiring-challenge\dev-hiring-challenge\GitHubQuery\obj\Debug\GitHub.Query.csprojAssemblyReference.cache
+Z:\Prj\Delmiro\Ateliware\dev-hiring-challenge\dev-hiring-challenge\GitHubQuery\obj\Debug\GitHub.Query.csproj.CoreCompileInputs.cache
+Z:\Prj\Delmiro\Ateliware\dev-hiring-challenge\dev-hiring-challenge\GitHubQuery\bin\Debug\GitHubQuery.dll
+Z:\Prj\Delmiro\Ateliware\dev-hiring-challenge\dev-hiring-challenge\GitHubQuery\bin\Debug\GitHubQuery.pdb
+Z:\Prj\Delmiro\Ateliware\dev-hiring-challenge\dev-hiring-challenge\GitHubQuery\obj\Debug\GitHubQuery.dll
+Z:\Prj\Delmiro\Ateliware\dev-hiring-challenge\dev-hiring-challenge\GitHubQuery\obj\Debug\GitHubQuery.pdb

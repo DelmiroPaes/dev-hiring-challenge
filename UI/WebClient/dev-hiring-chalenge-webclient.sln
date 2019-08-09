@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.757
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dev-hiring-chalenge-webclient", "dev-hiring-chalenge-webclient\dev-hiring-chalenge-webclient.csproj", "{A74A384D-1591-4F5B-9852-6D678BCE1A58}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dev-hiring-chalenge-webclient.Tests", "dev-hiring-chalenge-webclient.Tests\dev-hiring-chalenge-webclient.Tests.csproj", "{AF1713FD-B32A-4CAB-9E1F-0B0AD0D7D01B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A74A384D-1591-4F5B-9852-6D678BCE1A58}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A74A384D-1591-4F5B-9852-6D678BCE1A58}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A74A384D-1591-4F5B-9852-6D678BCE1A58}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A74A384D-1591-4F5B-9852-6D678BCE1A58}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF1713FD-B32A-4CAB-9E1F-0B0AD0D7D01B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF1713FD-B32A-4CAB-9E1F-0B0AD0D7D01B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF1713FD-B32A-4CAB-9E1F-0B0AD0D7D01B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF1713FD-B32A-4CAB-9E1F-0B0AD0D7D01B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C3B5AB83-055D-4ABC-9B1A-937FF29AEE43}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,121 @@
+﻿@using System.Reflection
+@using dev_hiring_chalenge_webclient.Controllers
+@using GitHub.Domain
+@{
+    ViewBag.Title = "Resultado da consulta ao GitHub";
+}
+<h2>@ViewBag.Title.</h2>
+@*<h3>@ViewBag.Message</h3>*@
+@*@{
+        int iRootItemsIndex = 0;
+    }*@
+
+<div class="container">
+
+    @*<div class="container">
+            <div class="row">
+
+                <nav class="col-sm-3" id="myScrollspy">
+                    <ul class="nav nav-pills nav-stacked" data-spy="affix" data-offset-top="205">
+                        @{
+                            for(iRootItemsIndex = 0; iRootItemsIndex < ViewBag.RootItems.Count; ++iRootItemsIndex)
+                            {
+                                <li><a href="#ViewBag.RootItems[iRootItemsIndex].Id">ViewBag.RootItems[iRootItemsIndex].Name</a></li>
+                            }
+                        }
+                    </ul>
+                </nav>
+
+                <div class="col-sm-9">
+                    <div id="section1">
+                        <h1>Section 1</h1>
+                        <p>Try to scroll this section and look at the navigation list while scrolling!</p>
+                    </div>
+                    <div id="section2">
+                        <h1>Section 2</h1>
+                        <p>Try to scroll this section and look at the navigation list while scrolling!</p>
+                    </div>
+                    <div id="section3">
+                        <h1>Section 3</h1>
+                        <p>Try to scroll this section and look at the navigation list while scrolling!</p>
+                    </div>
+                    <div id="section41">
+                        <h1>Section 4-1</h1>
+                        <p>Try to scroll this section and look at the navigation list while scrolling!</p>
+                    </div>
+                    <div id="section42">
+                        <h1>Section 4-2</h1>
+                        <p>Try to scroll this section and look at the navigation list while scrolling!</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>*@
+
+    <ul class="nav nav-pills">
+        @{
+            for(int iRootItemsIndex = 0; iRootItemsIndex < ViewBag.RootItems.Count; ++iRootItemsIndex)
+            {
+                if(iRootItemsIndex == 0)
+                {
+                    <li class="active"><a data-toggle="pill" href="#Laguage_@iRootItemsIndex">@ViewBag.RootItems[iRootItemsIndex].Language</a></li>
+                    continue;
+                }
+
+                <li><a data-toggle="pill" href="#Laguage_@iRootItemsIndex">@ViewBag.RootItems[iRootItemsIndex].Language</a></li>
+            }
+        }
+    </ul>
+
+    @*<-- POCO, POCO, POCO... /-->*@
+    @{ string classValue = string.Empty;}
+    <div class="tab-content">
+        @{
+            for(int iRootItemsIndex2 = 0; iRootItemsIndex2 < ViewBag.RootItems.Count; ++iRootItemsIndex2)
+            {
+                if(iRootItemsIndex2 == 0)
+                {
+                    classValue = "tab-pane fade in active";
+                }
+                else
+                {
+                    classValue = "tab-pane fade";
+                }
+
+                <div id="Laguage_@iRootItemsIndex2" class="@classValue">
+                    <h3>@ViewBag.RootItems[iRootItemsIndex2].Language</h3>
+                    @foreach(var tempItem in ViewBag.RootItems[iRootItemsIndex2].Items)
+                    {
+                        if(tempItem.Language != ViewBag.RootItems[iRootItemsIndex2].Language)
+                        {
+                            continue;
+                        }
+                        <h4><li>Nome do Projeto: @tempItem.Name</li></h4>
+                        <div class="container  pre-scrollable table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Campo</th>
+                                        <th>Valor</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @{
+                                        var itemProps = tempItem.GetType().GetProperties();
+                                    }
+                                    @foreach(var ItemProp in itemProps)
+                                    {
+                                        <tr>
+                                            <td>@ItemProp.Name.ToString()</td>
+                                            <td>@ItemProp.GetValue(tempItem, null)</td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    }
+                </div>
+            }
+        }
+    </div>
+</div>

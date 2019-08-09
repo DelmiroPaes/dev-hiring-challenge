@@ -1,0 +1,78 @@
+﻿@using System.Reflection
+@using dev_hiring_chalenge_webclient.Controllers
+@using GitHub.Domain
+@{
+    ViewBag.Title = "Resultado da consulta ao GitHub";
+}
+<h2>@ViewBag.Title.</h2>
+@*<h3>@ViewBag.Message</h3>*@
+@{
+    int iRootItemsIndex = 0;
+}
+
+@*<div class="container" data-spy="scroll">*@
+<div class="container">
+    <ul class="nav nav-pills">
+        @{
+            for(iRootItemsIndex = 0; iRootItemsIndex < ViewBag.RootItems.Count; ++iRootItemsIndex)
+            {
+                if(iRootItemsIndex == 0)
+                {
+                    <li class="active"><a data-toggle="pill" href="#Laguage_@iRootItemsIndex">@ViewBag.RootItems[iRootItemsIndex].Language</a></li>
+                    //continue;
+                }
+                else
+                {
+                    <li><a data-toggle="pill" href="#Laguage_@iRootItemsIndex">@ViewBag.RootItems[iRootItemsIndex].Language</a></li>
+                }
+            }
+        }
+
+        @{iRootItemsIndex = 0;}
+    </ul>
+
+    @*<-- POCO, POCO, POCO... /-->*@
+    <div class="tab-content">
+        @{
+            for(iRootItemsIndex = 0; iRootItemsIndex < ViewBag.RootItems.Count; ++iRootItemsIndex)
+            {
+                <div id="Laguage_@iRootItemsIndex" class="tab-pane fade in active">
+                    <h3>@ViewBag.RootItems[iRootItemsIndex].Language</h3>
+                    @foreach(var tempItem in ViewBag.RootItems[iRootItemsIndex].Items)
+                    {
+                        if(tempItem.Language != ViewBag.RootItems[iRootItemsIndex].Language)
+                        {
+                            continue;
+                        }
+                        <h4><li>Nome do Projeto: @tempItem.Name</li></h4>
+                        @*<div class="container">*@
+                        @*<div class="container pre-scrollable">*@
+                        <div class="container  pre-scrollable table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Campo</th>
+                                        <th>Valor</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @{
+                                        var itemProps = tempItem.GetType().GetProperties();
+                                    }
+                                    @foreach(var ItemProp in itemProps)
+                                    {
+                                        <tr>
+                                            <td>@ItemProp.Name.ToString()</td>
+                                            <td>@ItemProp.GetValue(tempItem, null)</td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    }
+                </div>
+            }
+        }
+        @{iRootItemsIndex = 0;}
+    </div>
+</div>
