@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<ArrayOfArrayOfArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ArrayOfArrayOfString>
+    <ArrayOfString>
+      <string>Z:\Prj\Delmiro\Ateliware\dev-hiring-challenge\GitHub.Data\GitHubDataContexts\GitHubDataContext.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>Z:\Prj\Delmiro\Ateliware\dev-hiring-challenge\GitHubBridgeWebAPI\Web.config</string>
+      <string>Z:\Prj\Delmiro\Ateliware\dev-hiring-challenge\GitHubBridgeWebAPI\Web.Debug.config</string>
+      <string>Z:\Prj\Delmiro\Ateliware\dev-hiring-challenge\GitHubBridgeWebAPI\Web.Release.config</string>
+    </ArrayOfString>
+  </ArrayOfArrayOfString>
+</ArrayOfArrayOfArrayOfString>

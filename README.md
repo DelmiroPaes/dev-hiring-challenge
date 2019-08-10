@@ -1,5 +1,12 @@
 # Desafio técnico para desenvolvedores
 
+Deploy efetuado no Azure
+
+Acesso à UI:     https://dhc-delmiropaes.azurewebsites.net
+Acesso à WebAPI: https://githubbridgewebapi.azurewebsites.net/v1/GitHubBridge/GitHubQuery
+
+# Desafio técnico para desenvolvedores
+
 Construa uma nova aplicação, utilizando o framework de sua preferência (Rails, ASP.NET, Phoenix, etc), a qual deverá conectar na API do GitHub e disponibilizar as seguintes funcionalidades:
 
 - Botão para buscar e armazenar os repositórios destaques de 5 linguagens à sua escolha;

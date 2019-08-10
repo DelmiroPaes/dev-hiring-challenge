@@ -40,17 +40,22 @@ namespace dev_hiring_chalenge_webclient.Helpers
         {
             ADHCServiceJsonResult adhcServiceJsonResult = new ADHCServiceJsonResult();
             string urlGitHubBridgeWebAPI = string.Empty;
+            bool isRunningOnAzure = false;
 
             //TODO: Replace GitHubBridgeWebAPI by ADHCServiceJsonResult.
+            isRunningOnAzure = ConfigurationManager.AppSettings["IsRunningOnAzure"] == "true";
             urlGitHubBridgeWebAPI = ConfigurationManager.AppSettings["GitHubBridgeWebAPI"];
 
             if(string.IsNullOrEmpty(urlGitHubBridgeWebAPI))
             {
                 return adhcServiceJsonResult;
             }
-            else if (CheckByPing(urlGitHubBridgeWebAPI, 1000) == false)
+            else if (!isRunningOnAzure)
             {
-                return null;
+                if (CheckByPing(urlGitHubBridgeWebAPI, 1000) == false)
+                {
+                    return null;
+                }
             }
 
             //TODO: Create a test for servive offline.

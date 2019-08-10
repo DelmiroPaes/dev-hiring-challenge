@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<ArrayOfArrayOfArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ArrayOfArrayOfString>
+    <ArrayOfString>
+      <string>Z:\Prj\Delmiro\Ateliware\dev-hiring-challenge\UI\WebClient\dev-hiring-chalenge-webclient\Web.config</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>Z:\Prj\Delmiro\Ateliware\dev-hiring-challenge\UI\WebClient\dev-hiring-chalenge-webclient\Controllers\HomeController.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>Z:\Prj\Delmiro\Ateliware\dev-hiring-challenge\UI\WebClient\dev-hiring-chalenge-webclient\Helpers\GitHubQuery.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>Z:\Prj\Delmiro\Ateliware\dev-hiring-challenge\UI\WebClient\dev-hiring-chalenge-webclient\Views\Home\About.cshtml</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>dev-hiring-chalenge-webclient</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>Z:\Prj\Delmiro\Ateliware\dev-hiring-challenge\README.md</string>
+    </ArrayOfString>
+  </ArrayOfArrayOfString>
+</ArrayOfArrayOfArrayOfString>

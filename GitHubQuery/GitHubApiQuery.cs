@@ -598,7 +598,7 @@ namespace GitHubQuery
                     dbContext.Database.Connection.Open();
                     dbContext.Database.Connection.Close();
                 }
-                catch(SqlException)
+                catch(SqlException ex)
                 {
                     return false;
                 }

@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<ArrayOfArrayOfArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ArrayOfArrayOfString>
+    <ArrayOfString>
+      <string>dev-hiring-chalenge-webclient</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>Z:\Prj\Delmiro\Ateliware\dev-hiring-challenge\UI\WebClient\dev-hiring-chalenge-webclient\Views\Shared\_Layout.cshtml</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>Z:\Prj\Delmiro\Ateliware\dev-hiring-challenge\UI\WebClient\dev-hiring-chalenge-webclient\Content\variables.less</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>Z:\Prj\Delmiro\Ateliware\dev-hiring-challenge\UI\WebClient\dev-hiring-chalenge-webclient\Views\Home\About.cshtml</string>
+    </ArrayOfString>
+  </ArrayOfArrayOfString>
+</ArrayOfArrayOfArrayOfString>

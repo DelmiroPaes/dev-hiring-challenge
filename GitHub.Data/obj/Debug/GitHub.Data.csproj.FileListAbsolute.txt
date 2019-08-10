@@ -1,0 +1,14 @@
+Z:\Prj\Delmiro\Ateliware\dev-hiring-challenge\GitHub.Data\bin\Debug\GitHub.Data.dll.config
+Z:\Prj\Delmiro\Ateliware\dev-hiring-challenge\GitHub.Data\bin\Debug\GitHub.Data.dll
+Z:\Prj\Delmiro\Ateliware\dev-hiring-challenge\GitHub.Data\bin\Debug\GitHub.Data.pdb
+Z:\Prj\Delmiro\Ateliware\dev-hiring-challenge\GitHub.Data\bin\Debug\EntityFramework.dll
+Z:\Prj\Delmiro\Ateliware\dev-hiring-challenge\GitHub.Data\bin\Debug\EntityFramework.SqlServer.dll
+Z:\Prj\Delmiro\Ateliware\dev-hiring-challenge\GitHub.Data\bin\Debug\GitHub.Domain.dll
+Z:\Prj\Delmiro\Ateliware\dev-hiring-challenge\GitHub.Data\bin\Debug\GitHub.Domain.pdb
+Z:\Prj\Delmiro\Ateliware\dev-hiring-challenge\GitHub.Data\bin\Debug\EntityFramework.xml
+Z:\Prj\Delmiro\Ateliware\dev-hiring-challenge\GitHub.Data\bin\Debug\EntityFramework.SqlServer.xml
+Z:\Prj\Delmiro\Ateliware\dev-hiring-challenge\GitHub.Data\obj\Debug\GitHub.Data.csprojAssemblyReference.cache
+Z:\Prj\Delmiro\Ateliware\dev-hiring-challenge\GitHub.Data\obj\Debug\GitHub.Data.csproj.CoreCompileInputs.cache
+Z:\Prj\Delmiro\Ateliware\dev-hiring-challenge\GitHub.Data\obj\Debug\GitHub.Data.csproj.CopyComplete
+Z:\Prj\Delmiro\Ateliware\dev-hiring-challenge\GitHub.Data\obj\Debug\GitHub.Data.dll
+Z:\Prj\Delmiro\Ateliware\dev-hiring-challenge\GitHub.Data\obj\Debug\GitHub.Data.pdb
